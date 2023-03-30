@@ -1,0 +1,270 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'roboto', sans-serif;
+	text-align: center;
+}
+
+nav {
+	background-color: #0084ff;
+	position: relative;
+	z-index: 2;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	z-index: 3;
+}
+
+nav ul li {
+	position: relative;
+	margin: 0 10px;
+	z-index: 3;
+}
+
+nav ul li a {
+	display: block;
+	padding: 10px;
+	color: #fff;
+	text-decoration: none;
+	z-index: 3;
+}
+
+nav ul li ul {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background-color: #fff;
+	display: none;
+	z-index: 3; /* Add a higher z-index to the dropdown menus */
+}
+
+nav ul li:hover > ul {
+	display: block;
+	border-radius: 10px; /* set the border radius to create rounded corners */
+	z-index: 3;
+}
+
+nav ul li ul li {
+	display: block;
+	z-index: 3;
+}
+
+nav ul li ul li a {
+	padding: 10px;
+	color: #333;
+	border-radius: 50px; /* set the border radius to create rounded corners */
+	z-index: 3;
+}
+
+nav ul li:hover {
+	background-color: #fff;
+	border-radius: 10px; /* set the border radius to create rounded corners */
+	z-index: 3;
+}
+
+nav ul li:hover a {
+	color: #0084ff;
+		z-index: 3;
+}
+
+nav ul li:hover ul li a:hover {
+	background-color: #f1f1f1;
+	border-radius: 50px; /* set the border radius to create rounded corners */
+		z-index: 3;
+}
+
+.slideshow {
+	position: relative;
+	height: 400px;
+}
+
+.slideshow div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100;
+	height: 100%;
+	background-size: cover;
+	background-position: center center;
+}
+
+.slide img {
+  width: 1920px;
+  height: 400px;
+  object-fit: cover;
+  	z-index: -1; /* Set a higher z-index than the slideshow */
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	z-index: 1; /* Set a higher z-index than the slideshow */
+}
+
+.link {
+	color: #fff;
+	font-size: 24px;
+	background-color: rgba(0, 0, 0, 0.6);
+	text-decoration: none;
+	border: 2px solid #fff;
+	padding: 10px 20px;
+	border-radius: 30px;
+	z-index: 1; /* Set a higher z-index than the slideshow */
+}
+
+.link:hover {
+	background-color: #0084ff;
+	box-shadow: 0 0 5px #fff;
+}
+
+.main-text {
+	padding: 50px;
+	background-color: #f1f1f1;
+	text-align: center;
+	margin: 0 auto;
+  }
+.main-text p{
+	padding: 50px;
+	text-align: center;
+	width: 600px;
+	display: inline-block;
+  }
+  
+.grid-container-element { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-gap: 50px; 
+    border: 1px solid black;  
+	text-align: center;
+	border-radius: 30px;
+	align-items: center;  
+	padding: 10px;
+	margin: auto;
+	width: calc(50% - 25px);
+	color: #fff;
+	border: none;
+	font-size: 16px;
+	
+} 
+.grid-child-element { 
+    margin: 10px; 
+	border-radius: 15px; 
+	text-align: center;
+	background-color: #0084ff;
+	 text-decoration: none;
+}
+
+.Social {
+	padding: 5px;
+	text-align: center;
+	border-radius: 50px; /* set the border radius to create rounded corners */
+	z-index: 1; /* Set a higher z-index than the slideshow */
+}
+
+.link-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+.link-list li {
+  width: 100px;
+  background-color: #0084ff;
+  color: #0084ff;
+  margin: auto;
+  border-radius: 100px;
+  font-size: 16px;
+}
+
+.link-list li:hover {
+	background-color: #0084ff;
+	border-radius: 100px; /* set the border radius to create rounded corners */
+	color: #333;
+
+  
+}
+.Inquiry {
+    border: none;
+    border-collapse:collapse;
+    resize: none;
+    margin: 0;
+    padding: 10px;
+}
+ul
+{
+list-style-type: none;
+}
+/* Container for pricing boxes */
+.pricing {
+	display: flex;
+	justify-content: center; /* center horizontally */
+	max-width: 800px; /* reduce max width */
+	margin: 0 auto;
+  }
+  
+  /* Individual pricing boxes */
+  .pricing-box {
+	background-color: #f1f1f1;
+	padding: 30px;
+	border-radius: 10px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease-in-out;
+	flex: 1;
+	margin: 0 10px;
+	display: inline-block;
+	max-width: 500px; /* reduce width */
+	word-wrap: break-word; /* add word wrap */
+	text-align: center; /* center text */
+  }
+  
+  .pricing-box p {
+	padding: 50px;
+	text-align: center;
+	max-width: 100%; /* make sure the text doesn't overflow */
+  }
+  
+  .pricing-box:hover {
+	transform: translateY(-10px);
+  }
+  
+  /* Basic package */
+  .basic {
+	background-color: #0084ff;
+	color: #fff;
+  }
+  
+  .basic h3, .basic p {
+	color: #fff;
+  }
+  
+  /* Standard package */
+  .standard {
+	background-color: #0084ff;
+	color: #fff;
+  }
+  .standard h3, .standard p {
+	color: #fff;
+  }
+  /* Premium package */
+  .premium {
+	background-color: #0084ff;
+	color: #fff;
+  }
+  .premium h3, .premium p {
+	color: #fff;
+  }
